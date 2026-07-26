@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Bright Night</title>
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  background: linear-gradient(160deg, #12366f, #4b2d88);
+}
+
+.card {
+  width: min(920px, 100%);
+  padding: 30px;
+  background: #ffffff;
+  border: 7px solid #d5e7ff;
+  border-radius: 30px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, .25);
+}
+
+h1 {
+  margin: 0 0 12px;
+  text-align: center;
+  color: #173f82;
+  font-size: clamp(38px, 6vw, 66px);
+}
+
+.intro {
+  margin: 0 0 18px;
+  text-align: center;
+  color: #42516e;
+  font-size: 18px;
+}
+
+.start {
+  display: block;
+  margin: 0 auto 24px;
+  padding: 13px 24px;
+  border: none;
+  border-radius: 999px;
+  background: #2566c2;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.start.active {
+  background: #27884a;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 13px 0;
+  padding: 17px 18px;
+  border: 2px solid #deebff;
+  border-radius: 20px;
+  background: #f8fbff;
+  font-size: clamp(23px, 3vw, 33px);
+  line-height: 1.65;
+}
+
+.num {
+  flex: 0 0 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #3978d4;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.word {
+  display: inline-block;
+  padding: 0 4px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background .12s ease, transform .12s ease;
+}
+
+.word:hover,
+.word:focus {
+  background: #fff1a8;
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.ai {
+  color: #2166c2;
+  background: #e9f3ff;
+  font-weight: 800;
+}
+
+.ei {
+  color: #8a3bb8;
+  background: #f5ebff;
+  font-weight: 800;
+}
+
+.note {
+  margin: 22px 0 0;
+  text-align: center;
+  color: #68738b;
+  font-size: 16px;
+}
+
+@media (max-width: 600px) {
+  body { padding: 12px; }
+  .card { padding: 22px 14px; border-width: 4px; }
+  .line { align-items: flex-start; gap: 10px; }
+  .num { flex-basis: 38px; height: 38px; }
+}
+</style>
+</head>
+<body>
+<main class="card">
+  <h1>🌙 A Bright Night ⭐</h1>
+  <p class="intro">Press Start once, then hover over any individual word.</p>
+
+  <button class="start" id="startButton" type="button">
+    🔊 Start listening
+  </button>
+
+  <div class="line"><span class="num">1</span><span class="sentence"><span class="word" data-word="at" aria-label="Listen to At" tabindex="0">At</span> <span class="word ai" data-word="night" aria-label="Listen to night" tabindex="0">night</span>, <span class="word" data-word="eye" aria-label="Listen to I" tabindex="0">I</span> <span class="word" data-word="see" aria-label="Listen to see" tabindex="0">see</span> <span class="word" data-word="a" aria-label="Listen to a" tabindex="0">a</span> <span class="word ai" data-word="bright" aria-label="Listen to bright" tabindex="0">bright</span> <span class="word ai" data-word="light" aria-label="Listen to light" tabindex="0">light</span>.</span></div><div class="line"><span class="num">2</span><span class="sentence"><span class="word" data-word="eye" aria-label="Listen to I" tabindex="0">I</span> <span class="word" data-word="fly" aria-label="Listen to fly" tabindex="0">fly</span> <span class="word" data-word="my" aria-label="Listen to my" tabindex="0">my</span> <span class="word ai" data-word="kite" aria-label="Listen to kite" tabindex="0">kite</span> <span class="word" data-word="very" aria-label="Listen to very" tabindex="0">very</span> <span class="word ai" data-word="high" aria-label="Listen to high" tabindex="0">high</span>.</span></div><div class="line"><span class="num">3</span><span class="sentence"><span class="word" data-word="my" aria-label="Listen to My" tabindex="0">My</span> <span class="word" data-word="friend" aria-label="Listen to friend" tabindex="0">friend</span> <span class="word" data-word="has" aria-label="Listen to has" tabindex="0">has</span> <span class="word" data-word="a" aria-label="Listen to a" tabindex="0">a</span> <span class="word" data-word="red" aria-label="Listen to red" tabindex="0">red</span> <span class="word ai" data-word="tie" aria-label="Listen to tie" tabindex="0">tie</span> <span class="word" data-word="and" aria-label="Listen to and" tabindex="0">and</span> <span class="word" data-word="a" aria-label="Listen to a" tabindex="0">a</span> <span class="word" data-word="tasty" aria-label="Listen to tasty" tabindex="0">tasty</span> <span class="word ai" data-word="pie" aria-label="Listen to pie" tabindex="0">pie</span>.</span></div><div class="line"><span class="num">4</span><span class="sentence"><span class="word" data-word="our" aria-label="Listen to Our" tabindex="0">Our</span> <span class="word ei" data-word="neighbour" aria-label="Listen to neighbour" tabindex="0">neighbour</span> <span class="word" data-word="has" aria-label="Listen to has" tabindex="0">has</span> <span class="word" data-word="a" aria-label="Listen to a" tabindex="0">a</span> <span class="word" data-word="big" aria-label="Listen to big" tabindex="0">big</span> <span class="word ei" data-word="sleigh" aria-label="Listen to sleigh" tabindex="0">sleigh</span>.</span></div><div class="line"><span class="num">5</span><span class="sentence"><span class="word" data-word="he" aria-label="Listen to He" tabindex="0">He</span> <span class="word" data-word="has" aria-label="Listen to has" tabindex="0">has</span> <span class="word ei" data-word="eight" aria-label="Listen to eight" tabindex="0">eight</span> <span class="word" data-word="gifts" aria-label="Listen to gifts" tabindex="0">gifts</span> <span class="word" data-word="for" aria-label="Listen to for" tabindex="0">for</span> <span class="word" data-word="my" aria-label="Listen to my" tabindex="0">my</span> <span class="word ei" data-word="eighteen" aria-label="Listen to eighteen" tabindex="0">eighteen</span> <span class="word" data-word="friends" aria-label="Listen to friends" tabindex="0">friends</span>.</span></div>
+
+  <p class="note">
+    Each word is separate. On a phone or tablet, tap the word you want to hear.
+  </p>
+</main>
+
+<script>
+let speechEnabled = false;
+let lastWord = "";
+let lastSpokenAt = 0;
+
+function getEnglishVoice() {
+  const voices = window.speechSynthesis.getVoices();
+
+  return (
+    voices.find(voice => voice.lang === "en-GB") ||
+    voices.find(voice => voice.lang.startsWith("en-GB")) ||
+    voices.find(voice => voice.lang.startsWith("en"))
+  );
+}
+
+function speakSingleWord(word) {
+  if (!speechEnabled) return;
+
+  if (!("speechSynthesis" in window)) {
+    alert("Speech is not supported in this browser.");
+    return;
+  }
+
+  const now = Date.now();
+
+  if (word === lastWord && now - lastSpokenAt < 650) {
+    return;
+  }
+
+  lastWord = word;
+  lastSpokenAt = now;
+
+  window.speechSynthesis.cancel();
+
+  const utterance = new SpeechSynthesisUtterance(word);
+  utterance.lang = "en-GB";
+  utterance.rate = 0.72;
+  utterance.pitch = 1;
+  utterance.volume = 1;
+
+  const voice = getEnglishVoice();
+  if (voice) {
+    utterance.voice = voice;
+  }
+
+  window.speechSynthesis.speak(utterance);
+}
+
+const startButton = document.getElementById("startButton");
+
+startButton.addEventListener("click", () => {
+  speechEnabled = true;
+  startButton.textContent = "✅ Listening is on";
+  startButton.classList.add("active");
+
+  // Unlocks speech in browsers that require a user action.
+  speakSingleWord("ready");
+});
+
+document.querySelectorAll(".word").forEach(wordElement => {
+  const wordToSpeak = wordElement.dataset.word;
+
+  wordElement.addEventListener("mouseenter", () => {
+    speakSingleWord(wordToSpeak);
+  });
+
+  wordElement.addEventListener("click", event => {
+    event.stopPropagation();
+    speakSingleWord(wordToSpeak);
+  });
+
+  wordElement.addEventListener("focus", () => {
+    speakSingleWord(wordToSpeak);
+  });
+
+  wordElement.addEventListener("keydown", event => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      speakSingleWord(wordToSpeak);
+    }
+  });
+});
+
+window.speechSynthesis.onvoiceschanged = () => {};
+</script>
+</body>
+</html>
